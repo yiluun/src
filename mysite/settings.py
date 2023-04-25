@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # my apps
     'personal',
+    'account',
+
 
 
     # django's apps
@@ -72,6 +74,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# this replaces the authentication method provided by Django and overrides it with the custom one that was built
+AUTH_USER_MODEL = 'account.Account'
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
